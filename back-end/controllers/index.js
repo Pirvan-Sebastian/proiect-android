@@ -1,7 +1,7 @@
-const orezarController = require("./orezar");
+const cardController = require("./card");
 const camatarController = require("./camatar");
 
 module.exports = {
-    orezarController,
+    cardController,
     camatarController
 }

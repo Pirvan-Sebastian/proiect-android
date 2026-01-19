@@ -1,4 +1,4 @@
-const { camatarModel, orezarModel, datorieModel } = require("../models");
+const { camatarModel, cardModel, datorieModel } = require("../models");
 
 const camatarController = {
     createCamatar: async (req, res) => {
@@ -19,7 +19,7 @@ const camatarController = {
         try {
             const camatari = await camatarModel.findAll({
                 include: {
-                    model: orezarModel,
+                    model: cardModel,
                     through: { attributes: [] },
                     attributes: ["nume", "prenume"],
                 },

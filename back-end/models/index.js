@@ -1,10 +1,10 @@
-const orezarModel = require("./orezar");
+const cardModel = require("./card");
 const camatarModel = require("./camatar");
 
-camatarModel.belongsToMany(orezarModel, { through: "datorieModel" });
-orezarModel.belongsToMany(camatarModel, { through: "datorieModel" });
+camatarModel.belongsToMany(cardModel, { through: "datorieModel" });
+cardModel.belongsToMany(camatarModel, { through: "datorieModel" });
 
 module.exports = {
-    orezarModel,
+    cardModel,
     camatarModel,
 }
