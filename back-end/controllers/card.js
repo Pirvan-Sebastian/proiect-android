@@ -20,7 +20,7 @@ const cardController = {
         try {
             const cards = await cardModel.findAll();
             if (cards.length <= 0) {
-                return res.status(404).send("Nu exista cards");
+                return res.status(404).send("No cards exist");
             }
             return res.status(200).json(cards);
         } catch (err) {
@@ -33,7 +33,7 @@ const cardController = {
             const cardId = req.params.id;
             const cardCautat = await cardModel.findByPk(cardId);
             if (!cardCautat) {
-                return res.status(404).send(`Nu exista cardul cu id-ul ${cardId}`);
+                return res.status(404).send(`There is no card with the ID: ${cardId}`);
             }
             return res.status(200).json(cardCautat);
         } catch (err) {
@@ -46,7 +46,7 @@ const cardController = {
             const cardId = req.params.id;
             const cardCautat = await cardModel.findByPk(cardId);
             if (!cardCautat) {
-                return res.status(404).send(`Nu exista cardul cu id-ul ${cardId}`);
+                return res.status(404).send(`There is no card with the ID: ${cardId}`);
             }
             const noulCard = {
                 nume: req.body.nume,
@@ -69,14 +69,14 @@ const cardController = {
         try {
             const cardId = req.params.id;
             if(!await cardModel.findByPk(cardId)) {
-                return res.status(404).send(`Nu exista cardul cu id-ul ${cardId}`);
+                return res.status(404).send(`There is no card with the ID: ${cardId}`);
             }
             await cardModel.destroy({
                 where: {
                     id: cardId,
                 }
             });
-            return res.status(200).send(`Cardul cu id-il ${cardId} a fost sters cu succes`);
+            return res.status(200).send(`Card with ID:${cardId} deleted`);
         } catch (err) {
             console.log(err);
             return res.status(500).send("Server error");
