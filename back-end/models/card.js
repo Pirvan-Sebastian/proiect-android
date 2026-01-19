@@ -12,18 +12,6 @@ const cardModel = db.define("cards",
         type: DataTypes.STRING,
         allowNull: false,
     },
-    prenume: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    numarCopii: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    orezCules: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
     },
     {
         freezeTableName: true,
