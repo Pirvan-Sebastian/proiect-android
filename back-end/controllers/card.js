@@ -4,7 +4,8 @@ const cardController = {
     createCard: async (req, res) => {
         try {
             const card = {
-                nume: req.body.nume
+                nume: req.body.nume,
+                description: req.body.description,
             }
             const cardCreat = await cardModel.create(card);
             return res.status(200).json(cardCreat);
@@ -47,9 +48,7 @@ const cardController = {
             }
             const noulCard = {
                 nume: req.body.nume,
-                prenume: req.body.prenume,
-                numarCopii: req.body.numarCopii,
-                orezCules: req.body.orezCules,
+                description: req.body.description
             };
             await cardModel.update(noulCard, {
                 where: {
