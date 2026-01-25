@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body style="background-color: #fdfdcb;">
+    <div class="main-container">
+        <!-- div adaugare post-it-container -->
+        <div class="form-container">
+            <h3 id="title1">
+                Personal Notes
+            </h3>
+            <form id="form-notes">
+                <input type="text" id="nume" name="newNote" placeholder="  Add a new note..."><br />
+                <button id="add-button" type="submit" value="Submit">+Add</button>
+            </form>
+        </div>
+
+        <!-- div post it uri -->
+        <div class="post-it-container" id="post-it-home">
+           
+        </div>
+        </div>
+             
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

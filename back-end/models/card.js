@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const db = require("../config/db");
 
-const orezarModel = db.define("orezari", 
+const cardModel = db.define("cards", 
     {
     id: {
         type: DataTypes.INTEGER,
@@ -12,21 +12,13 @@ const orezarModel = db.define("orezari",
         type: DataTypes.STRING,
         allowNull: false,
     },
-    prenume: {
+    description: {
         type: DataTypes.STRING,
-        allowNull: false,
-    },
-    numarCopii: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    orezCules: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
     },
     {
         freezeTableName: true,
     }
 );
-module.exports = orezarModel;
+module.exports = cardModel;

@@ -4,7 +4,9 @@ const dotenv = require("dotenv").config();
 const port = process.env.PORT;
 const router = require("./routes");
 const db = require("./config/db");
+const cors= require("cors")
 app.use(express.json());
+app.use(cors())
 
 app.get("/", async (req, res) => {
     return res.status(200).send("Muie galati");
