@@ -2,10 +2,13 @@
   display: flex;
   gap: 1em;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .post-it {
   width: fit-content;
+  max-width: 20%;
+  min-width: 20%;
   aspect-ratio: 1 / 1;
   background-color: #f4aeba;
   display: flex;

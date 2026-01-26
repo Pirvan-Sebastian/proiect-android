@@ -13,7 +13,7 @@ const cardModel = db.define("cards",
         allowNull: false,
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
     },
     },
