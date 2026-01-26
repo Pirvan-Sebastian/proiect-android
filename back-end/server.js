@@ -9,13 +9,13 @@ app.use(express.json());
 app.use(cors())
 
 app.get("/", async (req, res) => {
-    return res.status(200).send("Muie galati");
+    return res.status(200).send("Back-End Started");
 })
 
 app.get("/reset", async (req, res) => {
     try {
         await db.sync({ force: true });
-        return res.status(200).send("Baza de date a fost resetata cu succes");
+        return res.status(200).send("Database Reset");
     } catch (err) {
         console.log(err);
         return res.status(500).send("Server error");
