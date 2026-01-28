@@ -40,7 +40,7 @@ const fetchUsers = async () => {
         (user) => `
         <div class="post-it" id="post-it-${user.id}">
           <h2>${user.nume}</h2>
-           <p>${user.description}</p>
+           <p class="container-text">${user.description}</p>
            <button class="delete-btn" onclick="deleteUser(${user.id})">x</button>
             <form id="post-notes">
                 <input type="text" id="desc-input-${user.id}" name="newDesc" placeholder="  Add Description ...  "><br />
